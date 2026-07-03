@@ -39,19 +39,19 @@ flowchart LR
 
 Reward Modeling frameworks are strictly categorized based on the data formatting input structures and the mathematical granularity of the scoring heads.
 
-### A. Bradley-Terry Pairwise Reward Models (Outcome-Supervised)
-*   **Mechanism:** Ingests a prompt ($x$) along with two distinct candidate completions ($y_w, y_l$) [INDEX: 11]. The core loss function optimizes the scalar reward layer ($r_\psi$) to satisfy:
-    $$\mathcal{L}_{\text{RM}}(\psi) = -\mathbb{E}_{(x, y_w, y_l) \sim \mathcal{D}} \left[ \log \sigma \left( r_\psi(x, y_w) - r_\psi(x, y_l) \right) \right]$$
-*   **Behavior:** Evaluates the terminal outcome globally, making it a robust engine for establishing high-level chatbot personas and formatting styles [INDEX: 11].
+- ### A. Bradley-Terry Pairwise Reward Models (Outcome-Supervised)
+	*   **Mechanism:** Ingests a prompt ($x$) along with two distinct candidate completions ($y_w, y_l$) [INDEX: 11]. The core loss function optimizes the scalar reward layer ($r_\psi$) to satisfy:
+	    $$\mathcal{L}_{\text{RM}}(\psi) = -\mathbb{E}_{(x, y_w, y_l) \sim \mathcal{D}} \left[ \log \sigma \left( r_\psi(x, y_w) - r_\psi(x, y_l) \right) \right]$$
+	*   **Behavior:** Evaluates the terminal outcome globally, making it a robust engine for establishing high-level chatbot personas and formatting styles [INDEX: 11].
 
-### B. Process-Supervised Reward Models (PRM / Step Verifiers)
-*   **Mechanism:** Operates on token sequences segmented by step-demarcation tags (e.g., `\n` or explicit logic boundaries) [INDEX: 16]. The model treats each logical step independently, assigning a unique preference score vector per checkpoint to track reasoning density precisely [INDEX: 16].
+- ### B. Process-Supervised Reward Models (PRM / Step Verifiers)
+	*   **Mechanism:** Operates on token sequences segmented by step-demarcation tags (e.g., `\n` or explicit logic boundaries) [INDEX: 16]. The model treats each logical step independently, assigning a unique preference score vector per checkpoint to track reasoning density precisely [INDEX: 16].
 
-### C. LLM-as-a-Judge Reward Regressors
-*   **Mechanism:** Bypasses narrow linear scalar heads. It leverages an ultra-large, frozen frontier model (such as GPT-4o or specialized 70B variants) as an automated evaluator, passing generations through strict multi-axis text rubrics to emit explicit score labels programmatically.
+- ### C. LLM-as-a-Judge Reward Regressors
+	*   **Mechanism:** Bypasses narrow linear scalar heads. It leverages an ultra-large, frozen frontier model (such as GPT-4o or specialized 70B variants) as an automated evaluator, passing generations through strict multi-axis text rubrics to emit explicit score labels programmatically.
 
-### D. Direct Preference Optimization (DPO Reparameterization)
-*   **Mechanism:** Completely removes the physical requirement to host a separate reward network in GPU VRAM [INDEX: 11]. DPO mathematically reparameterizes the policy-reward link, proving that the active language model's own implicit token logits can serve as the reward estimator natively, streamlining post-training alignment pipelines [INDEX: 11].
+- ### D. Direct Preference Optimization (DPO Reparameterization)
+	*   **Mechanism:** Completely removes the physical requirement to host a separate reward network in GPU VRAM [INDEX: 11]. DPO mathematically reparameterizes the policy-reward link, proving that the active language model's own implicit token logits can serve as the reward estimator natively, streamlining post-training alignment pipelines [INDEX: 11].
 
 ---
 
