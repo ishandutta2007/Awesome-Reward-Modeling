@@ -1,5 +1,8 @@
-# Awesome-Reward-Modeling
-## Reward Modeling in AI: History, Progression, Variants, & Applications
+# 🏆 Awesome Reward Modeling
+
+![Awesome Reward Modeling Banner](./assets/banner.svg)
+
+## 🤖 Reward Modeling in AI: History, Progression, Variants, & Applications
 
 **Reward Modeling**—alternatively designated as preference modeling, value alignment orchestration, or critique scoring architectures—is an advanced post-training optimization paradigm in artificial intelligence. It focuses on constructing an explicit, secondary neural network (the **Reward Model** or RM) designed to mathematically quantify the quality, safety, formatting compliance, and semantic alignment of generative AI outputs. 
 
@@ -7,7 +10,7 @@ While base foundational models are trained on raw next-token prediction to mimic
 
 ---
 
-## 1. The Macro Chronological Evolution
+## 📅 1. The Macro Chronological Evolution
 
 The technical framework governing reward modeling has transitioned from un-ranked manual scoring functions to web-scale pairwise text comparisons, token-level process verifiers, and native deterministic programmatic checking loops.
 
@@ -29,7 +32,7 @@ flowchart LR
 
 ---
 
-## 2. Core Functional & Architectural Variants
+## 🧬 2. Core Functional & Architectural Variants
 
 Reward Modeling frameworks are strictly categorized based on the data formatting input structures and the mathematical granularity of the scoring heads.
 
@@ -42,7 +45,7 @@ Reward Modeling frameworks are strictly categorized based on the data formatting
 
 ---
 
-## 3. High-Capacity Architectural & Scaling Component Types
+## 🏗️ 3. High-Capacity Architectural & Scaling Component Types
 
 To deploy reward configurations stably over massive distributed cluster loops, modern engineering frameworks implement hybrid multi-component scoring topologies.
 
@@ -70,7 +73,7 @@ end
 
 ---
 
-## 4. Production Engineering Challenges & Cluster Solutions
+## ⚙️ 4. Production Engineering Challenges & Cluster Solutions
 
 Enforcing multi-model reward calculations across large distributed post-training infrastructure setups introduces unique VRAM allocation caps and data scaling constraints.
 
@@ -81,7 +84,7 @@ Enforcing multi-model reward calculations across large distributed post-training
 
 ---
 
-## 5. Frontier Real-World AI Infrastructure Applications
+## 🚀 5. Frontier Real-World AI Infrastructure Applications
 
 | Infrastructure Application | Description / Application Details | First Used Year | First Used Paper |
 | :--- | :--- | :--- | :--- |
@@ -91,7 +94,7 @@ Enforcing multi-model reward calculations across large distributed post-training
 
 ---
 
-## References
+## 📚 References
 1. Christiano, P. F., et al. (2017). Deep reinforcement learning from human preferences. *Advances in Neural Information Processing Systems (NeurIPS)*, 30.
 2. Stiennon, N., et al. (2020). Learning to summarize with human feedback. *Advances in Neural Information Processing Systems (NeurIPS)*, 33, 3008-3021.
 3. Ouyang, L., et al. (2022). Training language models to follow instructions with human feedback. *Advances in Neural Information Processing Systems (NeurIPS)*, 35 [INDEX: 11].

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a051b" />
+      <stop offset="50%" stop-color="#0c0d2b" />
+      <stop offset="100%" stop-color="#15082d" />
+    </linearGradient>
+
+    <!-- Glowing Line Gradients -->
+    <linearGradient id="glowPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8a2be2" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#da70d6" stop-opacity="1" />
+      <stop offset="100%" stop-color="#8a2be2" stop-opacity="0.2" />
+    </linearGradient>
+
+    <linearGradient id="glowCyan" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0080ff" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Drop Shadows / Glows -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGrad)" />
+
+  <!-- Abstract Dynamic Grid & Nodes -->
+  <g opacity="0.3">
+    <path d="M 0,100 L 1200,300 M 0,300 L 1200,100 M 0,200 L 1200,200" stroke="#4a2e80" stroke-width="1.5" />
+    <circle cx="200" cy="133" r="4" fill="#00ffff" />
+    <circle cx="400" cy="200" r="6" fill="#da70d6" />
+    <circle cx="600" cy="200" r="8" fill="#8a2be2" />
+    <circle cx="800" cy="200" r="6" fill="#da70d6" />
+    <circle cx="1000" cy="266" r="4" fill="#00ffff" />
+  </g>
+
+  <!-- Floating Glowing Wave representing Reward Signals (Dynamic / Fluent) -->
+  <path d="M -50,220 C 200,100 400,340 600,220 C 800,100 1000,340 1250,220" fill="none" stroke="url(#glowPurple)" stroke-width="6" filter="url(#glow)" />
+  <path d="M -50,220 C 200,140 400,300 600,220 C 800,140 1000,300 1250,220" fill="none" stroke="url(#glowCyan)" stroke-width="2" />
+
+  <!-- Core Illustration Node (Visualizing Reinforcement & Alignment) -->
+  <g transform="translate(600, 200)" filter="url(#glow)">
+    <!-- Outer Orbit -->
+    <circle r="60" fill="none" stroke="#00ffff" stroke-width="1.5" stroke-dasharray="10 5" opacity="0.8" />
+    <circle r="45" fill="none" stroke="#da70d6" stroke-width="2" opacity="0.9" />
+    <circle r="30" fill="#15082d" stroke="#8a2be2" stroke-width="3" />
+    <!-- Dynamic Inner Spark -->
+    <polygon points="0,-12 10,8 -10,8" fill="#00ffff" />
+  </g>
+
+  <!-- Typography -->
+  <text x="600" y="320" font-family="'Outfit', 'Inter', 'Segoe UI', sans-serif" font-size="38" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="4">
+    AWESOME REWARD MODELING
+  </text>
+  <text x="600" y="350" font-family="'Inter', 'Segoe UI', sans-serif" font-size="16" font-weight="500" fill="#8b9bb4" text-anchor="middle" letter-spacing="2">
+    HISTORY • PROGRESSION • VARIANTS • APPLICATIONS
+  </text>
+</svg>
